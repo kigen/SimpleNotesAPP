@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity{
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     ButterKnife.bind(this);
-    //setActionBar(toolbar);
     ((App)getApplication()).getApplicationComponent().inject(this);
 
     viewModel.getNotes().observe(this, new Observer<List<Note>>() {
